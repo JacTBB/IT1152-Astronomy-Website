@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astronomy Odyssey</title>
+
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="styles/base.css" rel="stylesheet" type="text/css">
+  <link href="styles/nav.css" rel="stylesheet" type="text/css">
+  <link href="styles/footer.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="styles/home.css" rel="stylesheet" type="text/css">
+  <link href="styles/stars.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- JS -->
+  <noscript>Please enable Javascript.</noscript>
+  <script src="scripts/loading.js"></script>
+  <script src="scripts/stars.js" defer></script>
+</head>
+<body onload="LoadContent()">
+  <nav id="navbar" style="display: none;">
+    <span>
+      <a href="#"><img src="images/Astronomy Odyssey.png"></a>
+      <a href="#"><h2>Astronomy Odyssey</h2></a>
+    </span>
+    
+    <div class="navtoggle" id="navtoggle" onclick="menu()">
+      <div id="navbar1"></div>
+      <div id="navbar2"></div>
+      <div id="navbar3"></div>
+    
+      <script>
+        //Display menu
+        var menuopen = false
+        function menu() {
+          if (menuopen == false) {
+            menuopen = true;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "visible";
+          }
+          else {
+            menuopen = false;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "hidden";
+          }
+        }
+      </script>
+    </div>
+
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Merch</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Discover</h5></a>
+  </nav>
+  <div id="navdisplay">
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Discover</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Merch</h5></a>
+  </div>
+
+  <div class="content" id="maindiv" style="display: none;">
+    <section id="mainsection">
+      <article id="article-1">
+        <div id="stars">
+          <h2 id="stars-title">
+            The Best Place To Explore The Universe Of <span>Astronomy</span>
+          </h2>
+        </div>
+      </article>
+
+      <article id="article-2">
+        <h3>
+          DISCOVER THE UNIVERSE OF ASTRONOMY
+        </h3>
+        <h4>
+            <p>Latest Space Developments</p>
+            <p>Our Planet & The Moon</p>
+            <p>Our Solar System</p>
+            <p>Our Galaxy</p>
+            <p>The Universe</p>
+            <p>Space Travel</p>
+        </h4>
+      </article>
+      
+      <footer id="footer">
+        <div class="footerinfo">
+          <span>
+            <a href="#"><img src="images/Astronomy Odyssey.png"></a>
+            <a href="#"><h2>Astronomy Odyssey</h2></a>
+          </span>
+          <p>Copyright &copy; Astronomy Odyssey 2023</p>
+        </div>
+  
+        <div class="footerlinks">
+          <h3>Quick Links</h3>
+          <a class="footertext" href="#">Discover</a>
+          <a class="footertext" href="#">News</a>
+          <a class="footertext" href="#">Merch</a>
+        </div>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

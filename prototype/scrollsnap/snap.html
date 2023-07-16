@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      div {
+        height: 500px;
+        overflow: scroll;
+        scroll-snap-type: y mandatory;
+      }
+
+      /* Scrollbar */
+      div::-webkit-scrollbar {
+        width: 10px;
+      }
+      div::-webkit-scrollbar-track {
+        background: rgb(250,250,250); 
+      }
+      div::-webkit-scrollbar-thumb {
+        background: rgb(220,220,220); 
+      }
+      div::-webkit-scrollbar-thumb:hover {
+        background: rgb(200,200,200); 
+      }
+
+      section {
+        position: relative;
+        scroll-snap-align: start;
+        height: 500px;
+        background-color: pink;
+        border: solid 1px black;
+      }
+    </style>
+  </head>
+  <body>
+      <div>
+        <section>A</section>
+        <section>B</section>
+        <section>C</section>
+        <section>D</section>
+      </div>
+  </body>
+</html>

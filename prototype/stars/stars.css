@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#stars {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(10,20,50);
+    overflow: hidden;
+}
+
+#stars .star {
+    position: absolute;
+}
+
+#stars .star1 {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+}
+
+#stars .star2 {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+}
+
+#stars .star3 {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+
+@keyframes StarsAnimation1 {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+@keyframes StarsAnimation2 {
+    0%, 50%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+.planet-orbit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 100%;
+    border: solid 1px white;
+}
+
+.planet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 12.5%;
+    height: 12.5%;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.planet-inner {
+    border-radius: 100%;
+    z-index: 1;
+}
+
+@keyframes PlanetOrbit {
+    0% {
+      transform: rotate(-90deg) translate(400%, 0) rotate(-90deg);
+    }
+    100% {
+        transform: rotate(270deg) translate(400%, 0) rotate(270deg);
+    }
+}
+
+#earth-orbit {
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+}
+#earth {
+    animation: PlanetOrbit 100s linear infinite;
+}
+#earth-inner {
+    width: 40px;
+    height: 40px;
+    background-image: url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg);
+    background-size: cover;
+    transform: rotate(calc(23.26deg + 180deg)) scale(1.2);
+    animation: PlanetRotate calc(23.9*.5s) linear infinite;
+}
+
+#mars-orbit {
+    bottom: -140px;
+    left: -140px;
+    width: 480px;
+    height: 480px;
+}
+#mars {
+    animation: PlanetOrbit 120s linear infinite;
+}
+#mars-inner {
+    width: 20px;
+    height: 20px;
+    background-color: lightsalmon;
+}
+
+@keyframes PlanetRotate {
+    0%{
+      background-position: 0% center;
+    }
+    100%{
+      background-position: -200% center;
+    }
+  }

@@ -1,0 +1,138 @@
+nav {
+  background-color: #062c43;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  z-index: 4;
+}
+
+#navbar span a {
+  float: left;
+  padding: 0;
+  height: 80px;
+  color: white;
+  text-decoration-line: none;
+}
+#navbar span a img {
+  padding: 5px;
+  padding-left: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.navbutton {
+  float: right;
+  margin: 10px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 1px;
+  color: white;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-family: 'Arial';
+}
+.navbutton:hover {
+  color: rgb(20,20,60);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(20,20,60);
+}
+.navbutton:nth-child(3) {
+  margin-right: 30px;
+}
+
+.navtoggle {
+  display: none;
+  float: right;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+#navbar1, #navbar2, #navbar3 {
+  background-color: white;
+  margin: 6px 0;
+  width: 40px;
+  height: 5px;
+  transition: 2.1s;
+}
+.change #navbar1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.change #navbar2 {
+  opacity: 0;
+}
+.change #navbar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+#navdisplay {
+  visibility: hidden;
+  background-color: #062c43;
+  position: fixed;
+  top: -200px;
+  padding: 0;
+  padding-top: 10px;
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  z-index: 3;
+  transition: 1.1s;
+}
+.displaychange {
+  transform: translateY(259.5px)
+}
+.navdisplaybutton {
+  float: left;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1px;
+  color: white;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-family: 'Arial';
+}
+.navdisplaybutton:hover {
+  color: rgb(20,20,60);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(20,20,60);
+}
+.navdisplaybutton:nth-child(1) {
+  margin-left: calc(100% - 350px);
+}
+
+@media (max-width: 760px) {
+  .navbutton {
+    display: none;
+  }
+  
+  .navdropdown {
+    display: none;
+  }
+
+  .navtoggle {
+    display: block;
+  }
+
+  #navdisplay {
+    height: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  #navdisplay {
+    height: 240px;
+  }
+
+  .navdisplaybutton {
+    margin: 15px;
+    margin-left: calc(50% - 50px) !important;
+    margin-right: calc(50% - 50px);
+    width: 100px;
+    text-align: center;
+  }
+}

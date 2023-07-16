@@ -1,0 +1,92 @@
+#mainsection {
+    color: white;
+}
+
+#mainsection > hr {
+    width: 70%;
+}
+
+.dual-pane {
+    display: flex;
+    min-height: 500px;
+}
+.left-pane {
+    flex: 50%;
+}
+.right-pane {
+    flex: 50%;
+}
+
+#article-1 {
+    background-image: url('https://parade.com/.image/t_share/MTk3ODc0MzI2NTQ2OTUwMDA2/order-of-the-planets.jpg')
+}
+
+#article-1 > div > div {
+    display: flex;
+    padding: 20px;
+    flex-flow: column;
+}
+
+#article-1 > div > div > img {
+    align-self: center;
+    max-width: 100%;
+    max-height: 280px;
+    margin: 0 auto;
+    display: none;
+}
+.stage {
+    display: none !important;
+}
+
+#article-1 > div > .right-pane {
+    display: block;
+}
+
+#article-2 {
+    padding: 0;
+}
+
+#article-2 > h3 {
+    background-color: rgb(40,60,160);
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 3px 4px black;
+}
+
+#article-2 > h4 {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20,40,100);
+    margin: 0;
+}
+#article-2 > h4 > p {
+    min-width: min(20%, 150px);
+    min-height: 50px;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(20,40,100);
+}
+#article-2 > h4 > p:hover {
+    background-color: rgb(20,40,120);
+    outline: 1px solid black;
+    text-shadow: 1px 2px 4px black;
+}
+
+#article-2 > p {
+    padding: 0 50px;
+}
+
+#article-3 > a {
+    display: block;
+    color: white;
+    font-size: 1.5em;
+}

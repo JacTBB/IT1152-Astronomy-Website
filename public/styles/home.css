@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#maindiv {
+    height: calc(100% - 60px);
+    color: white;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+#mainsection > article {
+    scroll-snap-align: start;
+}
+#footer {
+    scroll-snap-align: end;
+}
+
+
+
+#article-1 {
+    padding: 0;
+    min-height: 500px;
+}
+
+#article-1 > #stars > h2 {
+    float: right;
+    margin: 0;
+    margin: 60px 60px;
+    padding: 20px;
+    max-width: 300px;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 3px 5px rgb(40,80,200);
+    z-index: 10;
+}
+
+#article-1 > #stars > h2 > span {
+    color: rgb(100,180,255);
+}
+
+
+
+#article-2 {
+    padding: 0;
+}
+
+#article-2 > h3 {
+    background-color: rgb(40,60,160);
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 3px 4px black;
+}
+
+#article-2 > h4 {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20,40,100);
+    margin: 0;
+}
+#article-2 > h4 > p {
+    min-width: min(20%, 150px);
+    min-height: 50px;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(20,40,100);
+}
+#article-2 > h4 > p:hover {
+    background-color: rgb(20,40,120);
+    outline: 1px solid black;
+    text-shadow: 1px 2px 4px black;
+}

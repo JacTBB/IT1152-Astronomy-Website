@@ -1,0 +1,46 @@
+#stars {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: rgb(10,20,50);
+    overflow: hidden;
+}
+
+#stars .star {
+    position: relative;
+}
+
+#stars .star1 {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+}
+
+#stars .star2 {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+}
+
+#stars .star3 {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+
+@keyframes StarsAnimation1 {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+@keyframes StarsAnimation2 {
+    0%, 50%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}

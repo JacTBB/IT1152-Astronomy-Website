@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astronomy</title>
+
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="stars.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="stars">
+      <div class="planet-orbit" id="earth-orbit">
+        <div class="planet" id="earth"><div class="planet-inner" id="earth-inner"></div></div>
+      </div>
+      <div class="planet-orbit" id="mars-orbit">
+        <div class="planet" id="mars"><div class="planet-inner" id="mars-inner"></div></div>
+      </div>
+    </div>
+    <script>
+      const Stars = document.getElementById('stars')
+
+      for (let i=0; i<300; i++) {
+        async function Generate() {
+          const Star = document.createElement('div')
+          Star.classList.add('star', 'star1')
+          Star.style.top = `${Math.random()*100}%`
+          Star.style.left = `${Math.random()*100}%`
+          Star.style.backgroundColor = `rgb(${(Math.random()*100)+50},${(Math.random()*80)+50},${(Math.random()*150)+100})`
+          Star.style.opacity = '0'
+          Star.style.animation = `StarsAnimation${Math.round(Math.random()+1)} 1s ease-in-out infinite`
+          Star.style.animationDuration = `${(Math.random()*10)+5}s`
+          Star.style.boxShadow = `
+          0px 0px 16px 2px ${Star.style.backgroundColor},
+          0px 0px 80px 6px blue
+          `
+          Stars.appendChild(Star)
+        }
+        Generate()
+      }
+      for (let i=0; i<100; i++) {
+        async function Generate() {
+          const Star = document.createElement('div')
+          Star.classList.add('star', 'star2')
+          Star.style.top = `${Math.random()*100}%`
+          Star.style.left = `${Math.random()*100}%`
+          Star.style.backgroundColor = `rgb(${(Math.random()*100)+50},${(Math.random()*80)+50},${(Math.random()*150)+100})`
+          Star.style.opacity = '0'
+          Star.style.animation = `StarsAnimation${Math.round(Math.random()+1)} 1s ease-in-out infinite`
+          Star.style.animationDuration = `${(Math.random()*10)+5}s`
+          Star.style.boxShadow = `
+          0px 0px 24px 3px ${Star.style.backgroundColor},
+          0px 0px 120px 9px blue
+          `
+          Stars.appendChild(Star)
+        }
+        Generate()
+      }
+      for (let i=0; i<20; i++) {
+        async function Generate() {
+          const Star = document.createElement('div')
+          Star.classList.add('star', 'star3')
+          Star.style.top = `${Math.random()*100}%`
+          Star.style.left = `${Math.random()*100}%`
+          Star.style.backgroundColor = `rgb(${(Math.random()*150)+50},${(Math.random()*150)+100},${(Math.random()*50)+200})`
+          Star.style.opacity = '0'
+          Star.style.animation = `StarsAnimation${Math.round(Math.random()+1)} 1s ease-in-out infinite`
+          Star.style.animationDuration = `${(Math.random()*10)+5}s`
+          Star.style.boxShadow = `
+          0px 0px 40px 5px ${Star.style.backgroundColor},
+          0px 0px 200px 15px blue
+          `
+          Stars.appendChild(Star)
+        }
+        Generate()
+      }
+    </script>
+</body>
+</html>

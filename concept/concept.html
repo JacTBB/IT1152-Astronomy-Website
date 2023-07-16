@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astronomy</title>
+
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="base.css" rel="stylesheet" type="text/css">
+  <link href="nav.css" rel="stylesheet" type="text/css">
+  <link href="footer.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="concept.css" rel="stylesheet" type="text/css">
+
+  <!-- JS -->
+  <noscript>Please enable Javascript.</noscript>
+  <script src="loading.js"></script>
+</head>
+<body onload="LoadContent()">
+  <nav id="navbar" style="display: none;">
+    <span>
+      <a href="#"><img src="https://warwickastrosoc.files.wordpress.com/2020/07/cropped-logo-high-quality.png"></a>
+    </span>
+    
+    <div class="navtoggle" id="navtoggle" onclick="menu()">
+      <div id="navbar1"></div>
+      <div id="navbar2"></div>
+      <div id="navbar3"></div>
+    
+      <script>
+        //Display menu
+        var menuopen = false
+        function menu() {
+          if (menuopen == false) {
+            menuopen = true;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "visible";
+          }
+          else {
+            menuopen = false;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "hidden";
+          }
+        }
+      </script>
+    </div>
+
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Merch</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Rockets</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Space</h5></a>
+  </nav>
+  <div id="navdisplay">
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Space</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Rockets</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Merch</h5></a>
+  </div>
+
+  <div class="content" id="maindiv" style="display: none;">
+    <section id="mainsection">
+      <article id="article-1">
+        <div class="dual-pane">
+          <div class="left-pane" id="">
+            <img src="https://warwickastrosoc.files.wordpress.com/2020/07/cropped-logo-high-quality.png">  
+          </div>
+          <div class="right-pane">
+            <h2 style="font-size: 2.5em; text-shadow: 2px 3px 10px rgb(40,80,200);">The Best Place To Explore The Universe Of <span style="color: rgb(100,180,255);">Astronomy</span></h2>
+
+            <section class="stage">
+              <figure class="ball"><span class="shadow"></span></figure>
+            </section>
+            <style>
+              .ball {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                border-radius: 50%;
+                position: relative;
+                background: url('http://hop.ie/balls/images/world-map-one-color.png') repeat-x;
+                background-size: auto 100%;
+                -webkit-animation: move-map 30s infinite linear;
+                -moz-animation: move-map 30s infinite linear;
+                -o-animation: move-map 30s infinite linear;
+                -ms-animation: move-map 30s infinite linear;
+                animation: move-map 30s infinite linear;
+              }
+              
+              .ball:before {
+                content: "";
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                box-shadow: -40px 10px 70px 10px rgba(50,50,50,0.5) inset;
+                z-index: 2;
+              }
+              
+              .ball:after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.3;
+                background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%);
+              }
+              
+              .ball .shadow {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+                -webkit-transform: rotateX(90deg) translateZ(-150px);
+                -moz-transform: rotateX(90deg) translateZ(-150px);
+                -ms-transform: rotateX(90deg) translateZ(-150px);
+                -o-transform: rotateX(90deg) translateZ(-150px);
+                transform: rotateX(90deg) translateZ(-150px);
+                z-index: -1;
+              }
+              
+              .stage {
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+                margin: 20px;
+                -webkit-perspective: 1200px;
+                -moz-perspective: 1200px;
+                -ms-perspective: 1200px;
+                -o-perspective: 1200px;
+                perspective: 1200px;
+                -webkit-perspective-origin: 50% 50%;
+                -moz-perspective-origin: 50% 50%;
+                -ms-perspective-origin: 50% 50%;
+                -o-perspective-origin: 50% 50%;
+                perspective-origin: 50% 50%;
+                border-radius: 50%;
+                box-shadow: 0 0 50px white;
+              }
+              
+              @-moz-keyframes move-map {
+                0% {
+                  background-position: -849px 0; }
+              
+                100% {
+                  background-position: 0 0; } }
+              
+              @-webkit-keyframes move-map {
+                0% {
+                  background-position: 0 0; }
+                100% {
+                  background-position: -849px 0; }
+              }
+              
+              
+              @-o-keyframes move-map {
+                0% {
+                  background-position: -849px 0; }
+              
+                100% {
+                  background-position: 0 0; } }
+              
+              @-ms-keyframes move-map {
+                0% {
+                  background-position: -849px 0; }
+              
+                100% {
+                  background-position: 0 0; } }
+              
+              @keyframes move-map {
+                0% {
+                  background-position: -849px 0; }
+              
+                100% {
+                  background-position: 0 0; } }
+            </style>
+          </div>
+        </div>
+      </article>
+
+      <article id="article-2">
+        <h3>
+          DISCOVER THE UNIVERSE OF ASTRONOMY
+        </h3>
+        <h4>
+            <p>Latest Space Developments</p>
+            <p>Our Planet & The Moon</p>
+            <p>Our Solar System</p>
+            <p>Our Galaxy</p>
+            <p>The Universe</p>
+            <p>Space Travel</p>
+        </h4>
+
+        <br>
+
+        <p>
+          <br>
+          Compelling Visuals: Feature a captivating astronomical image or a slideshow of stunning images related to space, stars, galaxies, or planets. Visuals help create an immediate impact and generate interest.
+          <br>
+
+          <br>
+          Welcoming Message: Write a concise and engaging introduction that clearly communicates the purpose of your website. It should spark curiosity and encourage visitors to explore further.
+          <br>
+
+          <br>
+          Key Features: Highlight the unique features or content your website offers, such as interactive tools, educational resources, or the latest astronomical news. Present them in a visually appealing way to attract attention.
+          <br>
+
+          <br>
+          Call-to-Action (CTA): Place a prominent CTA button or section that encourages visitors to take a specific action, such as "Start Exploring," "Discover the Universe," or "Get Started." This directs users to dive deeper into your content.
+          <br>
+
+          <br>
+          Astronomy Facts or Trivia: Display interesting and intriguing astronomy facts or trivia on your homepage. This adds an element of curiosity and encourages visitors to explore further.
+          <br>
+
+          <br>
+          Latest News or Discoveries: Include a section highlighting the latest astronomical news, discoveries, or upcoming celestial events. This demonstrates that your website provides up-to-date and relevant information.
+          <br>
+
+          <br>
+          Featured Content: Showcase some of your best and most popular articles, blog posts, or resources related to astronomy. This gives visitors a taste of the valuable content available on your website.
+          <br>
+
+          <br>
+          Clear Navigation: Design a user-friendly and intuitive navigation menu that helps visitors easily access different sections and pages of your website. Keep it visible and easy to understand.
+          <br>
+
+          <br>
+          Testimonials or Reviews: If you have received positive feedback or testimonials from users or experts in the field of astronomy, consider displaying them on the homepage. This helps build trust and credibility.
+          <br>
+
+          <br>
+          Social Media Integration: Include buttons or links to your social media profiles, allowing visitors to connect with you on platforms like Facebook, Twitter, Instagram, or YouTube. This expands your reach and encourages engagement.
+          <br>
+        </p>
+      </article>
+
+      <hr>
+
+      <article id="article-3">
+        <a href="https://www.astronomy.com/">astronomy.com - News</a>
+        <a href="https://www.space.com/">space.com - News</a>
+        <a href="https://skyandtelescope.org/">skyandtelescope.org - News</a>
+        <a href="https://www.moongiant.com/">moongiant.com - Moon News</a>
+        <a href="https://hubblesite.org/">hubblesite.org - Hubble News</a>
+        <a href="https://www.planetary.org/">planetary.org - News</a>
+        <a href="https://welcome.astrobin.com/">astrobin.com - Astrophotography Image Hosting</a>
+        
+        <br>
+
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Parallax Star background in CSS" src="https://codepen.io/sarazond/embed/LYGbwj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/sarazond/pen/LYGbwj">
+          Parallax Star background in CSS</a> by sarazond (<a href="https://codepen.io/sarazond">@sarazond</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Solar System animation - Pure CSS" src="https://codepen.io/kowlor/embed/ZYYQoy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/kowlor/pen/ZYYQoy">
+          Solar System animation - Pure CSS</a> by Malik Dellidj (<a href="https://codepen.io/kowlor">@kowlor</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Solar CSSystem" src="https://codepen.io/robdimarzo/embed/LMOLer?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/robdimarzo/pen/LMOLer">
+          Solar CSSystem</a> by Rob DiMarzo (<a href="https://codepen.io/robdimarzo">@robdimarzo</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Solar System Explorer in CSS only" src="https://codepen.io/jcoulterdesign/embed/ZxXbeP?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jcoulterdesign/pen/ZxXbeP">
+          Solar System Explorer in CSS only</a> by Jamie Coulter (<a href="https://codepen.io/jcoulterdesign">@jcoulterdesign</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </article>
+    </section>
+
+    <footer id="footer">
+  <div class="footerinfo">
+    <img src="https://warwickastrosoc.files.wordpress.com/2020/07/cropped-logo-high-quality.png" alt="JS">
+    <h2><a href="#">Astronomy</a></h2>
+    <p>Copyright &copy; Astronomy 2023</p>
+    <p>
+      This is footer text.
+    </p>
+  </div>
+
+  <div class="footerlinks">
+    <h3>Quick Links</h3>
+    <a class="footertext" href="#">Space</a>
+    <a class="footertext" href="#">Rockets</a>
+    <a class="footertext" href="#">News</a>
+    <a class="footertext" href="#">Merch</a>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
