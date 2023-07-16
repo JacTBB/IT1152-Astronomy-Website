@@ -4,7 +4,7 @@ body {
 }
 
 #maindiv {
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     color: white;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
@@ -21,7 +21,8 @@ body {
 
 #article-1 {
     padding: 0;
-    min-height: 500px;
+    height: calc(100vh - 60px);
+    max-height: 600px;
 }
 
 #article-1 > #stars > h2 {
