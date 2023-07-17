@@ -1,8 +1,12 @@
-#stars {
+#space {
     width: 100%;
     height: 100%;
     min-height: 500px;
     background-color: rgb(10,20,50);
+    overflow: hidden;
+}
+
+#stars {
     overflow: hidden;
 }
 
@@ -43,4 +47,86 @@
     25%, 75% {
         opacity: 1;
     }
+}
+
+
+
+#planets {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.planet-orbit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 100%;
+    border: solid 1px rgba(255,255,255,0.1);
+}
+
+.planet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 12.5%;
+    height: 12.5%;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.planet-inner {
+    border-radius: 100%;
+    z-index: 1;
+}
+
+@keyframes PlanetOrbit {
+    0% {
+      transform: rotate(-90deg) translate(400%, 0) rotate(-90deg);
+    }
+    100% {
+        transform: rotate(270deg) translate(400%, 0) rotate(270deg);
+    }
+}
+
+@keyframes PlanetRotate {
+    0%{
+      background-position: 0% center;
+    }
+    100%{
+      background-position: -200% center;
+    }
+}
+
+#sun {
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/sun.jpg);
+    box-shadow: 0px 0px 500px 50px gold;
+}
+
+#earth-orbit {
+    bottom: -150px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+}
+#earth {
+    animation: PlanetOrbit 500s linear infinite;
+}
+#earth-inner {
+    width: 40px;
+    height: 40px;
+    background-image: url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg);
+    background-size: cover;
+    transform: rotate(calc(23.26deg + 180deg)) scale(1.2);
+    animation: PlanetRotate calc(23.9*3.0s) linear infinite;
 }

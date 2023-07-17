@@ -25,10 +25,11 @@ body {
     max-height: 600px;
 }
 
-#article-1 > #stars > h2 {
-    float: right;
+#article-1 > h2 {
+    position: absolute;
+    top: 60px;
+    right: 60px;
     margin: 0;
-    margin: 60px 60px;
     padding: 20px;
     max-width: 300px;
     font-size: 2.5em;
@@ -37,7 +38,7 @@ body {
     z-index: 10;
 }
 
-#article-1 > #stars > h2 > span {
+#article-1 > h2 > span {
     color: rgb(100,180,255);
 }
 

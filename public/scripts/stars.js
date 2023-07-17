@@ -14,7 +14,7 @@ function TouchingTitle(Star) {
     }
 }
 
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 200; i++) {
     const Star = document.createElement('div')
     Star.classList.add('star', 'star1')
     Star.style.top = `${Math.random() * 100}%`
@@ -25,7 +25,7 @@ for (let i = 0; i < 150; i++) {
     Star.style.animationDuration = `${(Math.random() * 15) + 5}s`
     Star.style.boxShadow = `
         0px 0px 16px 2px ${Star.style.backgroundColor},
-        0px 0px 80px 8px blue
+        0px 0px 80px 12px blue
         `
     Stars.appendChild(Star)
 
@@ -42,7 +42,7 @@ for (let i = 0; i < 50; i++) {
     Star.style.animationDuration = `${(Math.random() * 20) + 5}s`
     Star.style.boxShadow = `
         0px 0px 24px 3px ${Star.style.backgroundColor},
-        0px 0px 120px 12px blue
+        0px 0px 120px 18px blue
         `
     Stars.appendChild(Star)
 
@@ -59,7 +59,7 @@ for (let i = 0; i < 10; i++) {
     Star.style.animationDuration = `${(Math.random() * 25) + 5}s`
     Star.style.boxShadow = `
         0px 0px 40px 5px ${Star.style.backgroundColor},
-        0px 0px 200px 20px blue
+        0px 0px 200px 30px blue
         `
     Stars.appendChild(Star)
 
