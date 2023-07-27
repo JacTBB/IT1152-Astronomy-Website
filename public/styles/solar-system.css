@@ -1,0 +1,265 @@
+:root {
+  --sun-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/sun.jpg);
+  --sun-tilt: rotate(0deg);
+  --sun-hours: 600;
+  --sun-days: 0;
+  --sun-color: #cc9f4c;
+
+  --mercury-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/mercury2.jpg);
+  --mercury-tilt: rotate(0.034deg);
+  --mercury-hours: 1407.6;
+  --mercury-days: 87s;
+  --mercury-color: #999999;
+
+  --venus-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/venus2.jpg);
+  --venus-tilt: rotate(177.3deg);
+  --venus-hours: 5832.5;
+  --venus-days: 224s;
+  --venus-color: #e8cda2;
+
+  --earth-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/earth.jpg);
+  --earth-tilt: rotate(23.26deg);
+  --earth-hours: 23.9;
+  --earth-days: 365s;
+  --earth-color: #b3caff;
+
+  --mars-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/mars.jpg);
+  --mars-tilt: rotate(25.2deg);
+  --mars-hours: 24.6;
+  --mars-days: 687s;
+  --mars-color: #c07158;
+
+  --jupiter-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/jupiter.jpg);
+  --jupiter-tilt: rotate(3.1deg);
+  --jupiter-hours: 9.9;
+  --jupiter-days: 4331s;
+  --jupiter-color: #c9b5a4;
+
+  --saturn-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/saturn.jpg);
+  --saturn-tilt: rotate(26.7deg);
+  --saturn-hours: 10.7;
+  --saturn-days: 10747s;
+  --saturn-color: #f0e2c4;
+
+  --uranus-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/uranus2.jpg);
+  --uranus-tilt: rotate(97.8deg);
+  --uranus-hours: 17.2;
+  --uranus-days: 30589s;
+  --uranus-color: #b8d8e1;
+
+  --neptune-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/neptune.jpg);
+  --neptune-tilt: rotate(28.3deg);
+  --neptune-hours: 16.1;
+  --neptune-days: 59802s;
+  --neptune-color: #5e73bb;
+
+  --year-in-second: 30;
+}
+
+
+
+#solar-system {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+#solar-system div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+#solar-system .planet-orbit {
+  border: solid 1px rgba(200, 200, 200, 0.2);
+}
+
+#solar-system .planet {
+  top: 0;
+}
+
+@keyframes PlanetOrbit {
+  0% {
+    transform: rorate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes PlanetRotate {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+#sun {
+  margin-top: -20px;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: gold;
+}
+
+#mercury {
+  margin-top: -35px;
+  margin-left: -35px;
+  width: 70px;
+  height: 70px;
+  animation: PlanetOrbit calc(var(--mercury-days) / var(--year-in-second)) linear infinite;
+}
+#mercury .planet {
+  margin-top: -2px;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  background: #9f5e26;
+}
+
+#venus {
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  animation: PlanetOrbit calc(var(--venus-days) / var(--year-in-second)) linear infinite;
+}
+#venus .planet {
+  margin-top: -4px;
+  margin-left: -4px;
+  width: 8px;
+  height: 8px;
+  background: #BEB768;
+}
+
+#earth {
+  margin-top: -72.5px;
+  margin-left: -72.5px;
+  width: 145px;
+  height: 145px;
+  animation: PlanetOrbit calc(var(--earth-days) / var(--year-in-second)) linear infinite;
+}
+#earth .planet {
+  margin-top: -3px;
+  margin-left: -3px;
+  width: 6px;
+  height: 6px;
+  background: #11abe9;
+}
+
+#mars {
+  margin-top: -95px;
+  margin-left: -95px;
+  width: 190px;
+  height: 190px;
+  animation: PlanetOrbit calc(var(--mars-days) / var(--year-in-second)) linear infinite;
+}
+#mars .planet {
+  margin-top: -3px;
+  margin-left: -3px;
+  width: 6px;
+  height: 6px;
+  background: #cf3921;
+}
+
+#jupiter {
+  margin-top: -170px;
+  margin-left: -170px;
+  width: 340px;
+  height: 340px;
+  animation: PlanetOrbit calc(var(--jupiter-days) / var(--year-in-second)) linear infinite;
+}
+#jupiter .planet {
+  margin-top: -9px;
+  margin-left: -9px;
+  width: 18px;
+  height: 18px;
+  background: #c76e2a;
+}
+
+#saturn {
+  margin-top: -220px;
+  margin-left: -220px;
+  width: 440px;
+  height: 440px;
+  animation: PlanetOrbit calc(var(--saturn-days) / var(--year-in-second)) linear infinite;
+}
+#saturn .planet {
+  margin-top: -6px;
+  margin-left: -6px;
+  width: 12px;
+  height: 12px;
+  background: #e7c194;
+}
+#saturn:after {
+  position: absolute;
+  content: "";
+  width: 4.676%;
+  height: 2.34%;
+  top: 0px;
+  left: 50%;
+  margin-top: -1.2%;
+  margin-left: -2.3%;
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
+  transform: rotateZ(-52deg);
+  transform-origin: 52% 60%;
+  animation: PlanetOrbit calc(var(--saturn-days) / var(--year-in-second)) linear infinite;
+  animation-direction: reverse;
+}
+
+#uranus {
+  margin-top: -260px;
+  margin-left: -260px;
+  width: 520px;
+  height: 520px;
+  animation: PlanetOrbit calc(var(--uranus-days) / var(--year-in-second)) linear infinite;
+}
+#uranus .planet {
+  margin-top: -5px;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  background: #c76e2a;
+}
+
+#neptune {
+  margin-top: -315px;
+  margin-left: -315px;
+  width: 630px;
+  height: 630px;
+  animation: PlanetOrbit calc(var(--neptune-days) / var(--year-in-second)) linear infinite;
+}
+#neptune .planet {
+  margin-top: -5px;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  background: #175e9e;
+}
+
+#asteroids-belt {
+  margin-top: -150px;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.7;
+  border-color: transparent;
+  animation: PlanetOrbit calc(1500s / var(--year-in-second)) linear infinite;
+}
+#asteroids-belt div {
+  position: absolute;
+  margin-top: -1px;
+  margin-left: -1px;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+}
