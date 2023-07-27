@@ -3,6 +3,8 @@ const NavBar = document.getElementById('navbar')
 const NavDisplay = document.getElementById('navdisplay')
 
 NavBar.classList.add('navFadeOut')
+NavDisplay.style.visibility = 'hidden'
+
 MainDiv.onscroll = async () => {
     if (NavDisplay.style.visibility == 'hidden') {
         if (MainDiv.scrollTop < 1) {
