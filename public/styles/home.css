@@ -23,6 +23,7 @@ body {
     padding: 0;
     height: calc(100vh - 60px);
     max-height: 700px;
+    overflow: hidden;
 }
 
 #article-1 > h2 {
