@@ -1,5 +1,25 @@
+.navFadeIn {
+  animation-name: navFadeInAnim !important;
+  animation-duration: 0.5s;
+  background-color: rgba(20, 60, 140, 1);
+}
+.navFadeOut {
+  animation-name: navFadeOutAnim !important;
+  animation-duration: 0.5s;
+  background-color: rgba(20, 60, 140, 0);
+}
+
+@keyframes navFadeInAnim {
+  from {background-color: rgba(20, 60, 140, 0);}
+  to {background-color: rgba(20, 60, 140, 1);}
+}
+@keyframes navFadeOutAnim {
+  from {background-color: rgba(20, 60, 140, 1);}
+  to {background-color: rgba(20, 60, 140, 0);}
+}
+
 nav {
-  background-color: rgb(20, 60, 140);
+  background-color: rgba(20, 60, 140, 0);
   position: relative;
   padding: 0;
   width: 100%;

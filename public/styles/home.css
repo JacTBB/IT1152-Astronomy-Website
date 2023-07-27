@@ -4,7 +4,8 @@ body {
 }
 
 #maindiv {
-    height: calc(100vh - 60px);
+    top: 0;
+    height: 100vh;
     color: white;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
@@ -21,14 +22,14 @@ body {
 
 #article-1 {
     padding: 0;
-    height: calc(100vh - 60px);
-    max-height: 700px;
+    height: 100vh;
+    max-height: 800px;
     overflow: hidden;
 }
 
 #article-1 > h2 {
     position: absolute;
-    top: 60px;
+    top: 100px;
     right: 60px;
     margin: 0;
     padding: 20px;
