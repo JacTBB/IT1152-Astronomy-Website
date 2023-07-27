@@ -1,13 +1,36 @@
 const MainDiv = document.getElementById('maindiv')
 const NavBar = document.getElementById('navbar')
+const NavDisplay = document.getElementById('navdisplay')
+
 NavBar.classList.add('navFadeOut')
 MainDiv.onscroll = async () => {
-    if (MainDiv.scrollTop < 1) {
-        NavBar.classList.remove('navFadeIn')
-        NavBar.classList.add('navFadeOut')
+    if (NavDisplay.style.visibility == 'hidden') {
+        if (MainDiv.scrollTop < 1) {
+            NavBar.classList.remove('navFadeIn')
+            NavBar.classList.add('navFadeOut')
+        }
+        else {
+            NavBar.classList.remove('navFadeOut')
+            NavBar.classList.add('navFadeIn')
+        }
+    }
+}
+
+NavDisplay.ontransitionstart = async () => {
+    if (NavDisplay.style.visibility == 'visible') {
+        if (MainDiv.scrollTop < 1) {
+            NavBar.classList.remove('navFadeOut')
+            NavBar.classList.add('navFadeIn')
+        }
     }
     else {
-        NavBar.classList.remove('navFadeOut')
-        NavBar.classList.add('navFadeIn')
+        if (MainDiv.scrollTop < 1) {
+            NavBar.classList.remove('navFadeIn')
+            NavBar.classList.add('navFadeOut')
+        }
+        else {
+            NavBar.classList.remove('navFadeOut')
+            NavBar.classList.add('navFadeIn')
+        }
     }
 }

@@ -8,4 +8,4 @@
 | Stars & Planet Prototype | 3 hrs 41 mins |
 | Detail Menu Prototype (For Naila) | 1 hr 10 mins |
 | Astronomy Logo | 1 hr 20 mins |
-| Home | 7 hr 50 mins |
+| Home | 9 hr 0 mins |
