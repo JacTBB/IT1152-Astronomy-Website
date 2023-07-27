@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Astronomy Odyssey</title>
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
 
   <!-- Metadata -->
   <meta charset="UTF-8">
@@ -24,6 +25,7 @@
   <noscript>Please enable Javascript.</noscript>
   <script src="scripts/loading.js"></script>
   <script defer src="scripts/fadingnav.js"></script>
+  <script defer src="scripts/solar-system.js"></script>
 </head>
 <body onload="LoadContent()">
   <nav id="navbar" style="display: none;">
@@ -70,7 +72,7 @@
   <div class="content" id="maindiv" style="display: none;">
     <section id="mainsection">
       <article id="article-1">
-        <img src="https://solarsystem.nasa.gov/internal_resources/517">
+        <img src="images/solar-system/solarsystem_1600x500.jpg">
         <h2 id="title">
           Our Solar System
         </h2>
@@ -93,7 +95,7 @@
         <div id='sun'>
           <div class="planet"><div class="planet-inner"></div></div>
           <div id="sunbox">
-            <img src="images/sun.png">
+            <img src="images/solar-system/sun.png">
           </div>
           <p style="text-align: center;">
             Our Sun is a 4.5 billion-year-old star.
@@ -110,29 +112,177 @@
         <h3>
           Planets In Our Solar System
         </h3>
-        <div>
-          <button>Inner Planets</button>
-          <button>Outer Planets</button>
-          <button>Dwarf Planets</button>
+        <div id="nav-planets">
+          <div class="buttonactive" id="inner" onclick="nav_planets_function(this)">Inner Planets</div>
+          <div id="outer" onclick="nav_planets_function(this)">Outer Planets</div>
+          <div id="dwarf" onclick="nav_planets_function(this)">Dwarf Planets</div>
         </div>
-        <div id="inner-planets">
-          <div>Mercury</div>
-          <div>Venus</div>
-          <div>Earth</div>
-          <div>Mars</div>
+        <div id="inner-planets" class="planets-container active-container">
+          <div class="planet-card">
+            <img src="images/solar-system/mercury_480x320.jpg">
+            <div>
+              <h4>Mercury</h4>
+              <p>
+                Mercury—the smallest planet in
+                our solar system and closest to
+                the Sun—is only slightly larger
+                than Earth's Moon. Mercury is the
+                fastest planet, zipping around the
+                Sun every 88 Earth days.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/venus_480x320.png">
+            <div>
+              <h4>Venus</h4>
+              <p>
+                Venus spins slowly in the
+                opposite direction from most
+                planets. A thick atmosphere traps
+                heat in a runaway greenhouse
+                effect, making it the hottest
+                planet in our solar system.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/earth_480x320.jpg">
+            <div>
+              <h4>Earth</h4>
+              <p>
+                Earth—our home planet—is the
+                only place we know of so far
+                that's inhabited by living things.
+                It's also the only planet in our
+                solar system with liquid water on
+                the surface.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/mars_480x320.jpg">
+            <div>
+              <h4>Mars</h4>
+              <p>
+                Mars is a dusty, cold, desert
+                world with a very thin
+                atmosphere. There is strong
+                evidence Mars was — billions of
+                years ago — wetter and warmer,
+                with a thicker atmosphere.
+              </p>
+            </div>
+          </div>
         </div>
-        <div id="outer-planets">
-          <div>Jupiter</div>
-          <div>Saturn</div>
-          <div>Uranus</div>
-          <div>Neptune</div>
+        <div id="outer-planets" class="planets-container">
+          <div class="planet-card">
+            <img src="images/solar-system/jupiter_480x320.jpg">
+            <div>
+              <h4>Jupiter</h4>
+              <p>
+                Jupiter is more than twice as
+                massive than the other planets of
+                our solar system combined. The
+                giant planet's Great Red spot is a
+                centuries-old storm bigger than
+                Earth.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/saturn_480x320.jpg">
+            <div>
+              <h4>Saturn</h4>
+              <p>
+                Adorned with a dazzling,
+                complex system of icy rings,
+                Saturn is unique in our solar
+                system. The other giant planets
+                have rings, but none are as
+                spectacular as Saturn's.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/uranus_480x320.jpg">
+            <div>
+              <h4>Uranus</h4>
+              <p>
+                Uranus—seventh planet from the
+                Sun—rotates at a nearly 90-
+                degree angle from the plane of
+                its orbit. This unique tilt makes
+                Uranus appear to spin on its side.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/neptune_480x320.jpg">
+            <div>
+              <h4>Neptune</h4>
+              <p>
+                Neptune—the eighth and most
+                distant major planet orbiting our
+                Sun—is dark, cold and whipped
+                by supersonic winds. It was the
+                first planet located through
+                mathematical calculations.
+              </p>
+            </div>
+          </div>
         </div>
-        <div id="dwarf-planets">
-          <div>Pluto</div>
-          <div>Ceres</div>
-          <div>Makemake</div>
-          <div>Haumea</div>
-          <div>Eris</div>
+        <div id="dwarf-planets" class="planets-container">
+          <div class="planet-card">
+            <img src="images/solar-system/pluto_480x320.jpg">
+            <div>
+              <h4>Pluto</h4>
+              <p>
+                Pluto is a complex world of ice
+                mountains and frozen plains.
+                Once considered the ninth
+                planet, Pluto is the best known of
+                a new class of worlds called
+                dwarf planets.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/makemake_480x320.jpg">
+            <div>
+              <h4>Makemake</h4>
+              <p>
+                It takes 310 Earth years for
+                Makemake to complete one orbit
+                around our Sun.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/haumea_480x320.jpg">
+            <div>
+              <h4>Haumea</h4>
+              <p>
+                Haumea is one of the fastest
+                rotating large objects in our solar
+                system.
+              </p>
+            </div>
+          </div>
+          <div class="planet-card">
+            <img src="images/solar-system/eris_480x320.jpg">
+            <div>
+              <h4>Eris</h4>
+              <p>
+                Eris is one of the largest known
+                dwarf planets in our solar system.
+                It's about the same size as Pluto,
+                but it is three times farther from
+                the Sun. One orbit takes about
+                557 years.
+              </p>
+            </div>
+          </div>
         </div>
       </article>
       

@@ -9,4 +9,4 @@
 | Detail Menu Prototype (For Naila) | 1 hr 10 mins |
 | Astronomy Logo | 1 hr 20 mins |
 | Home | 9 hr 20 mins |
-| Solar System | 1 hr 0 min |
+| Solar System | 5 hr 20 min |
