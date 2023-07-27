@@ -2,6 +2,10 @@ const MainDiv = document.getElementById('maindiv')
 const NavBar = document.getElementById('navbar')
 const NavDisplay = document.getElementById('navdisplay')
 
+function fadingnav_check() {
+    return 'true'
+}
+
 NavBar.classList.add('navFadeOut')
 NavDisplay.style.visibility = 'hidden'
 

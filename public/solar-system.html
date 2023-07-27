@@ -12,27 +12,24 @@
   <link href="styles/fadingnav.css" rel="stylesheet" type="text/css">
   <link href="styles/footer.css" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="styles/home.css" rel="stylesheet" type="text/css">
-  <link href="styles/stars.css" rel="stylesheet" type="text/css">
-  <link href="styles/anim-solar-system.css" rel="stylesheet" type="text/css">
+  <link href="styles/solar-system.css" rel="stylesheet" type="text/css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
   <!-- JS -->
   <noscript>Please enable Javascript.</noscript>
   <script src="scripts/loading.js"></script>
   <script defer src="scripts/fadingnav.js"></script>
-  <script defer src="scripts/stars.js" defer></script>
-  <script defer src="scripts/anim-solar-system.js"></script>
 </head>
 <body onload="LoadContent()">
   <nav id="navbar" style="display: none;">
     <span>
-      <a href="#"><img src="images/Astronomy Odyssey.png"></a>
-      <a href="#"><h2>Astronomy Odyssey</h2></a>
+      <a href="home.html"><img src="images/Astronomy Odyssey.png"></a>
+      <a href="home.html"><h2>Astronomy Odyssey</h2></a>
     </span>
     
     <div class="navtoggle" id="navtoggle" onclick="menu()">
@@ -62,10 +59,10 @@
 
     <a class="navbutton" href="#"><h5 style="margin: 0;">Merch</h5></a>
     <a class="navbutton" href="#"><h5 style="margin: 0;">News</h5></a>
-    <a class="navbutton" href="solar-system.html"><h5 style="margin: 0;">Discover</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Discover</h5></a>
   </nav>
   <div id="navdisplay">
-    <a class="navdisplaybutton" href="solar-system.html"><h5 style="margin: 0">Discover</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Discover</h5></a>
     <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">News</h5></a>
     <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Merch</h5></a>
   </div>
@@ -73,61 +70,70 @@
   <div class="content" id="maindiv" style="display: none;">
     <section id="mainsection">
       <article id="article-1">
-        <h2 id="stars-title">
-          The Best Place To Explore The Universe Of <span>Astronomy</span>
+        <img src="https://solarsystem.nasa.gov/internal_resources/517">
+        <h2 id="title">
+          Our Solar System
         </h2>
-        <div id="space">
-          <div id="stars">
-          </div>
-          <div id="solar-system">
-            <div id='sun'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-
-            <div class="planet-orbit" id='mercury'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='venus'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='earth'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='mars'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='jupiter'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='saturn'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='uranus'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-            <div class="planet-orbit" id='neptune'>
-              <div class="planet"><div class="planet-inner"></div></div>
-            </div>
-
-            <div id='asteroids-belt'>
-
-            </div>
-          </div>
+        <div class="description">
+          <h4>
+            Why is it called the Solar System?
+          </h4>
+          <p>
+            There are many planetary systems like ours in the universe, with planets orbiting a host star.
+            <br>
+            <br>Our planetary system is called “the solar system” because we use the word “solar” to describe things related to our star, after the Latin word for Sun, "solis."
+          </p>
         </div>
       </article>
 
       <article id="article-2">
         <h3>
-          DISCOVER THE UNIVERSE OF ASTRONOMY
+          Sun
         </h3>
-        <h4>
-            <p>Latest Space Developments</p>
-            <p>Our Planet & The Moon</p>
-            <p>Our Solar System</p>
-            <p>Our Galaxy</p>
-            <p>The Universe</p>
-            <p>Space Travel</p>
-        </h4>
+        <div id='sun'>
+          <div class="planet"><div class="planet-inner"></div></div>
+          <div id="sunbox">
+            <img src="images/sun.png">
+          </div>
+          <p style="text-align: center;">
+            Our Sun is a 4.5 billion-year-old star.
+          </p>
+          <p>
+            A hot glowing ball of hydrogen and helium at the center of our solar system. The Sun is about 93 million miles (150 million kilometers) from Earth, and without its energy, life as we know it could not exist here on our home planet.
+            <br>
+            <br>The Sun is the largest object in our solar system. The Sun's volume would need 1.3 million Earths to fill it. Its gravity holds the solar system together, keeping everything from the biggest planets to the smallest bits of debris in orbit around it. The hottest part of the Sun is its core, where temperatures top 27 million degrees Fahrenheit (15 million degrees Celsius). The Sun's activity, from its powerful eruptions to the steady stream of charged particles it sends out, influences the nature of space throughout the solar system.
+          </p>
+        </div>
+      </article>
+
+      <article id="article-3">
+        <h3>
+          Planets In Our Solar System
+        </h3>
+        <div>
+          <button>Inner Planets</button>
+          <button>Outer Planets</button>
+          <button>Dwarf Planets</button>
+        </div>
+        <div id="inner-planets">
+          <div>Mercury</div>
+          <div>Venus</div>
+          <div>Earth</div>
+          <div>Mars</div>
+        </div>
+        <div id="outer-planets">
+          <div>Jupiter</div>
+          <div>Saturn</div>
+          <div>Uranus</div>
+          <div>Neptune</div>
+        </div>
+        <div id="dwarf-planets">
+          <div>Pluto</div>
+          <div>Ceres</div>
+          <div>Makemake</div>
+          <div>Haumea</div>
+          <div>Eris</div>
+        </div>
       </article>
       
       <footer id="footer">
