@@ -59,6 +59,14 @@
 
 
 
+@media (max-width: 400px) {
+  #solar-system * {
+    background-image: none !important;
+  }
+}
+
+
+
 #solar-system {
   position: absolute;
   top: 0;
@@ -119,6 +127,7 @@
   width: 400px;
   height: 400px;
   background-image: var(--sun-image);
+  background-color: var(--sun-color);
   transform: var(--sun-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--sun-hours)/var(--day-in-second)) linear infinite;
   box-shadow: 0 0 50px 10px var(--sun-color), 0 0 500px 100px rgba(204, 159, 76, 0.6);
@@ -143,6 +152,7 @@
   width: 40px;
   height: 40px;
   background-image: var(--mercury-image);
+  background-color: var(--mercury-color);
   transform: var(--mercury-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--mercury-hours)/var(--day-in-second)) linear infinite;
 }
@@ -166,6 +176,7 @@
   width: 80px;
   height: 80px;
   background-image: var(--venus-image);
+  background-color: var(--venus-color);
   transform: var(--venus-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--venus-hours)/var(--day-in-second)) linear infinite;
 }
@@ -189,6 +200,7 @@
   width: 60px;
   height: 60px;
   background-image: var(--earth-image);
+  background-color: var(--earth-color);
   transform: var(--earth-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--earth-hours)/var(--day-in-second)) linear infinite;
 }
@@ -212,6 +224,7 @@
   width: 60px;
   height: 60px;
   background-image: var(--mars-image);
+  background-color: var(--mars-color);
   transform: var(--mars-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--mars-hours)/var(--day-in-second)) linear infinite;
 }
@@ -235,6 +248,7 @@
   width: 180px;
   height: 180px;
   background-image: var(--jupiter-image);
+  background-color: var(--jupiter-color);
   transform: var(--jupiter-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--jupiter-hours)/var(--day-in-second)) linear infinite;
 }
@@ -258,6 +272,7 @@
   width: 120px;
   height: 120px;
   background-image: var(--saturn-image);
+  background-color: var(--saturn-color);
   transform: var(--saturn-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--saturn-hours)/var(--day-in-second)) linear infinite;
 }
@@ -297,6 +312,7 @@
   width: 100px;
   height: 100px;
   background-image: var(--uranus-image);
+  background-color: var(--uranus-color);
   transform: var(--uranus-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--uranus-hours)/var(--day-in-second)) linear infinite;
 }
@@ -320,6 +336,7 @@
   width: 100px;
   height: 100px;
   background-image: var(--neptune-image);
+  background-color: var(--neptune-color);
   transform: var(--neptune-tilt) scale(0.1);
   animation: PlanetRotate calc(var(--neptune-hours)/var(--day-in-second)) linear infinite;
 }
