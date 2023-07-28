@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astronomy Odyssey</title>
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="styles/base.css" rel="stylesheet" type="text/css">
+  <link href="styles/fadingnav.css" rel="stylesheet" type="text/css">
+  <link href="styles/footer.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="styles/space-travel.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <!-- JS -->
+  <noscript>Please enable Javascript.</noscript>
+  <script src="scripts/loading.js"></script>
+  <script defer src="scripts/fadingnav.js"></script>
+  <script defer src="scripts/space-travel.js"></script>
+</head>
+<body onload="LoadContent()">
+  <nav id="navbar" style="display: none;">
+    <span>
+      <a href="home.html"><img src="images/Astronomy Odyssey.png"></a>
+      <a href="home.html"><h2>Astronomy Odyssey</h2></a>
+    </span>
+    
+    <div class="navtoggle" id="navtoggle" onclick="menu()">
+      <div id="navbar1"></div>
+      <div id="navbar2"></div>
+      <div id="navbar3"></div>
+    
+      <script>
+        //Display menu
+        var menuopen = false
+        function menu() {
+          if (menuopen == false) {
+            menuopen = true;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "visible";
+          }
+          else {
+            menuopen = false;
+            document.getElementById('navtoggle').classList.toggle('change')
+            document.getElementById('navdisplay').classList.toggle('displaychange')
+            document.getElementById('navdisplay').style.visibility = "hidden";
+          }
+        }
+      </script>
+    </div>
+
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Merch</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navbutton" href="solar-system.html"><h5 style="margin: 0;">Discover</h5></a>
+  </nav>
+  <div id="navdisplay">
+    <a class="navdisplaybutton" href="solar-system.html"><h5 style="margin: 0">Discover</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">News</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Merch</h5></a>
+  </div>
+
+  <div class="content" id="maindiv" style="display: none;">
+    <section id="mainsection">
+      <article id="article-1">
+        <video autoplay controls muted loop id="rocket-video" src="videos/Falcon Heavy Animation.mp4"></video>
+        <script>
+          document.getElementById('rocket-video').playbackRate = 10
+          setTimeout(() => {
+            document.getElementById('rocket-video').playbackRate = 1.5
+          }, 4200)
+        </script>
+
+        <h2 id="title">
+          Space Travel
+        </h2>
+        <div class="description">
+          <h4>
+            The Final Frontier
+          </h4>
+          <p>
+            Space travel, the pinnacle of human exploration, represents our boundless curiosity and determination to reach beyond our planet's confines.
+            <br>
+            <br>Venturing beyond Earth's atmosphere, astronauts brave the unknown, traversing vast distances to unlock the secrets of the universe.
+            <br>
+            <br>From the historic Apollo moon missions to the futuristic prospects of interplanetary travel, this relentless pursuit of the stars continues to ignite our collective imagination and push the boundaries of what is possible.
+          </p>
+        </div>
+      </article>
+
+      <article id="article-2">
+        <h3>
+          Human Exploration On The Moon
+        </h3>
+        <div id='moon'>
+          <div class="planet"><div class="planet-inner"></div></div>
+          <div id="moonbox">
+            <img src="images/space-travel/moon.png">
+          </div>
+          <p style="text-align: center;">
+            “Landing a man on the Moon and returning him safely to Earth within a decade” was a national goal set by President John F. Kennedy in 1961. On July 20, 1969, astronaut Neil Armstrong took “one giant leap for mankind” as he stepped onto the Moon. Six Apollo missions were made to explore the Moon between 1969 and 1972.
+          </p>
+        </div>
+      </article>
+
+      <article id="article-3">
+        <h3>
+          Rockets
+        </h3>
+        <div id="nav-planets">
+          <div class="buttonactive" id="inner">Inner Planets</div>
+          <div id="outer">Outer Planets</div>
+          <div id="dwarf">Dwarf Planets</div>
+        </div>
+      </article>
+      
+      <footer id="footer">
+        <div class="footerinfo">
+          <span>
+            <a href="#"><img src="images/Astronomy Odyssey.png"></a>
+            <a href="#"><h2>Astronomy Odyssey</h2></a>
+          </span>
+          <p>Copyright &copy; Astronomy Odyssey 2023</p>
+        </div>
+  
+        <div class="footerlinks">
+          <h3>Quick Links</h3>
+          <a class="footertext" href="#">Discover</a>
+          <a class="footertext" href="#">News</a>
+          <a class="footertext" href="#">Merch</a>
+        </div>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
