@@ -113,10 +113,6 @@ body {
 
 
 #article-3 {
-    margin: 0;
-    padding: 40px;
-    padding-bottom: 80px;
-    height: 650px;
     background-color: black;
 }
 
@@ -125,106 +121,18 @@ body {
     font-size: 30px;
 }
 
-#article-3 #nav-planets {
+#article-3 #issbox {
     display: flex;
-    margin-bottom: 50px;
     justify-content: center;
+    margin: 20px 10px;
 }
 
-#article-3 #nav-planets div {
-    padding: 5px 20px;
-    border: none;
-    color: rgb(200,200,200);
-    background: none;
-    font-size: 20px;
-}
-#article-3 #nav-planets div:nth-child(2) {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-}
-#article-3 #nav-planets div:hover {
-    color: white;
-}
-#article-3 #nav-planets .buttonactive {
-    color: white;
+#article-3 #issbox img {
+    max-width: min(800px, 90%);
 }
 
-#article-3 .planets-container {
-    display: none;
-    position: absolute;
-    width: calc(100vw - 80px);
-    height: 500px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#article-3 .active-container {
-    display: flex;
-}
-
-#article-3 .swipe-left-in {
-    animation: anim-swipe-left-in ease-in-out;
-    animation-duration: 0.8s;
-}
-#article-3 .swipe-right-in {
-    animation: anim-swipe-right-in ease-in-out;
-    animation-duration: 0.8s;
-}
-@keyframes anim-swipe-left-in {
-    0% {transform: translateX(120%)}
-    100% {transform: translateX(0)}
-}
-@keyframes anim-swipe-right-in {
-    0% {transform: translateX(-120%)}
-    100% {transform: translateX(0)}
-}
-
-#article-3 .swipe-left-out {
-    animation: anim-swipe-left-out ease-in-out;
-    animation-duration: 0.8s;
-}
-#article-3 .swipe-right-out {
-    animation: anim-swipe-right-out ease-in-out;
-    animation-duration: 0.8s;
-}
-@keyframes anim-swipe-left-out {
-    0% {transform: translateX(0)}
-    100% {transform: translateX(-120%)}
-}
-@keyframes anim-swipe-right-out {
-    0% {transform: translateX(0)}
-    100% {transform: translateX(120%)}
-}
-
-#article-3 .planet-card {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex: 40%;
-    margin: 10px;
-    padding: 10px;
-    max-width: 600px;
-    height: 200px;
-    border: solid 1px white;
-}
-
-#article-3 .planet-card img {
-    margin-right: 15px;
-    height: 90%;
-    aspect-ratio: 480/320;
-}
-
-#article-3 .planet-card > div {
-    width: 42%;
-}
-
-#article-3 .planet-card h4 {
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-#article-3 .planet-card p {
-    margin: 5px 0;
+#article-3 p {
+    padding: 0 50px;
     text-align: justify;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -232,67 +140,143 @@ body {
     line-height: 1.5;
 }
 
-@media (max-width: 1300px) {
-    #article-3 {
-        height: 950px;
-    }
 
-    #article-3 .planet-card {
-        justify-content: center;
-        align-items: start;
-    }
 
-    #article-3 .planet-card {
-        width: 400px;
-        height: 350px;
-    }
-
-    #article-3 .planet-card img {
-        margin: 0;
-        height: auto;
-        max-height: 200px;
-        aspect-ratio: 480/320;
-    }
-
-    #article-3 .planet-card > div {
-        width: max-content;
-        max-width: 90%;
-    }
+#article-4 {
+    background-color: rgb(10,0,40);
 }
 
-@media (max-width: 980px) {
-    #article-3 {
-        height: 1050px;
-    }
-
-    #article-3 .planet-card {
-        width: 300px;
-        height: 400px;
-    }
+#article-4 h3 {
+    text-align: center;
+    font-size: 30px;
 }
 
-@media (max-width: 780px) {
-    #article-3 {
-        height: 1750px;
-    }
-
-    #article-3 .planet-card {
-        width: 400px;
-        height: 350px;
-    }
+#article-4 p {
+    padding: 0 50px;
+    text-align: justify;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    line-height: 1.5;
 }
 
-@media (max-width: 500px) {
-    #article-3 {
-        height: 2150px;
-    }
 
-    #article-3 .planet-card {
-        width: 280px;
-        height: 450px;
-    }
 
-    #article-3 .planet-card img {
-        max-height: 180px;
+#article-5 {
+    --rocket-scale: 3;
+    --starship: 120px;
+    --sls: 115px;
+    --saturn-v: 110px;
+    --ares-v: 105px;
+    --delta-iv: 70px;
+    --falcon-heavy: 69px;
+    --falcon-9: 69px;
+    --atlas-v: 65px;
+    --space-shuttle: 55px;
+    --soyuz: 42px;
+}
+
+#article-5 {
+    background-color: black;
+}
+
+#article-5 h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#article-5 #rockets-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* Scrollbar */
+#article-5 #rockets-container::-webkit-scrollbar {
+    height: 5px;
+}
+#article-5 #rockets-container::-webkit-scrollbar-track {
+    background: none;
+}
+#article-5 #rockets-container::-webkit-scrollbar-thumb {
+    background: rgb(140,140,140);
+    border-radius: 10px;
+}
+#article-5 #rockets-container::-webkit-scrollbar-thumb:hover {
+    background: rgb(160,160,160); 
+}
+
+#article-5 #rockets {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+#article-5 #rockets > div {
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+    border: solid 1px gray;
+}
+
+#article-5 #rockets .rocket-img {
+    display: flex;
+    justify-content: center;
+    align-items: end; 
+    width: 200px;
+    height: 400px;
+}
+
+/* Rocket Heights */
+#starship img {
+    height: calc(var(--starship) * var(--rocket-scale))
+}
+#sls img {
+    height: calc(var(--sls) * var(--rocket-scale))
+}
+#saturn-v img {
+    height: calc(var(--saturn-v) * var(--rocket-scale))
+}
+#ares-v img {
+    height: calc(var(--ares-v) * var(--rocket-scale))
+}
+#delta-iv img {
+    height: calc(var(--delta-iv) * var(--rocket-scale))
+}
+#falcon-heavy img {
+    height: calc(var(--falcon-heavy) * var(--rocket-scale))
+}
+#falcon-9 img {
+    height: calc(var(--falcon-9) * var(--rocket-scale))
+}
+#atlas-v img {
+    height: calc(var(--atlas-v) * var(--rocket-scale))
+}
+#space-shuttle img {
+    height: calc(var(--space-shuttle) * var(--rocket-scale))
+}
+#soyuz img {
+    height: calc(var(--soyuz) * var(--rocket-scale))
+}
+
+#article-5 #rockets h4 {
+    margin: 20px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+#article-5 #rockets p {
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    white-space: normal;
+}
+
+@media (max-height: 1200px) {
+    #article-5 #rockets > div {
+        display: flex;
+        width: 250px;
     }
 }
