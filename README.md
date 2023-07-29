@@ -10,4 +10,4 @@
 | Astronomy Logo | 1 hr 20 mins |
 | Home | 9 hr 20 mins |
 | Solar System | 5 hr 20 mins |
-| Space Travel | 3 hours 0 mins |
+| Space Travel | 4 hours 30 mins |
