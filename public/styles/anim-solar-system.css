@@ -1,53 +1,53 @@
 :root {
-  --sun-image: url('../images/home/sun.jpg');
+  --sun-image: url('../images/index/sun.jpg');
   --sun-tilt: rotate(0deg);
   --sun-hours: 24.5s;
   --sun-days: 0;
   --sun-color: #cc9f4c;
 
-  --mercury-image: url('../images/home/mercury.jpg');
+  --mercury-image: url('../images/index/mercury.jpg');
   --mercury-tilt: rotate(0.034deg);
   --mercury-hours: 1407.6s;
   --mercury-days: 87s;
   --mercury-color: #999999;
 
-  --venus-image: url('../images/home/venus.jpg');
+  --venus-image: url('../images/index/venus.jpg');
   --venus-tilt: rotate(177.3deg);
   --venus-hours: 5832.5s;
   --venus-days: 224s;
   --venus-color: #e8cda2;
 
-  --earth-image: url('../images/home/earth.jpg');
+  --earth-image: url('../images/index/earth.jpg');
   --earth-tilt: rotate(23.26deg);
   --earth-hours: 23.9s;
   --earth-days: 365s;
   --earth-color: #b3caff;
 
-  --mars-image: url('../images/home/mars.jpg');
+  --mars-image: url('../images/index/mars.jpg');
   --mars-tilt: rotate(25.2deg);
   --mars-hours: 24.6s;
   --mars-days: 687s;
   --mars-color: #c07158;
 
-  --jupiter-image: url('../images/home/jupiter.jpg');
+  --jupiter-image: url('../images/index/jupiter.jpg');
   --jupiter-tilt: rotate(3.1deg);
   --jupiter-hours: 9.9s;
   --jupiter-days: 4331s;
   --jupiter-color: #c9b5a4;
 
-  --saturn-image: url('../images/home/saturn.jpg');
+  --saturn-image: url('../images/index/saturn.jpg');
   --saturn-tilt: rotate(26.7deg);
   --saturn-hours: 10.7s;
   --saturn-days: 10747s;
   --saturn-color: #f0e2c4;
 
-  --uranus-image: url('../images/home/uranus.jpg');
+  --uranus-image: url('../images/index/uranus.jpg');
   --uranus-tilt: rotate(97.8deg);
   --uranus-hours: 17.2s;
   --uranus-days: 30589s;
   --uranus-color: #b8d8e1;
 
-  --neptune-image: url('../images/home/neptune.jpg');
+  --neptune-image: url('../images/index/neptune.jpg');
   --neptune-tilt: rotate(28.3deg);
   --neptune-hours: 16.1s;
   --neptune-days: 59802s;
