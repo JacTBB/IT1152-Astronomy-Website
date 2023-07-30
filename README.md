@@ -11,3 +11,5 @@
 | Home | 9 hr 20 mins |
 | Solar System | 5 hr 20 mins |
 | Space Travel | 4 hours 30 mins |
+| Store | 4 hrs 20 mins |
+| Checkout | 4 hrs 30 mins |
