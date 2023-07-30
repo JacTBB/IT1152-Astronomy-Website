@@ -1,0 +1,182 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#maindiv {
+    top: 0;
+    height: 100vh;
+    color: black;
+    background-color: rgb(240,240,240);
+    overflow-y: scroll;
+}
+
+#maindiv * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section, article {
+    background-color: transparent;
+}
+
+@media (max-width: 400px) {
+    article {
+        padding: 10px;
+    }
+}
+
+
+
+#article-1 {
+    height: 40vh;
+    padding: 0;
+    background-image: url('https://images.theconversation.com/files/446192/original/file-20220214-19-z6fu9c.jpeg?ixlib=rb-1.1.0&rect=49%2C143%2C2932%2C1464&q=45&auto=format&w=1356&h=668&fit=crop');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#article-1 h2 {
+    margin: 0;
+    padding: 20px 60px;
+    padding-top: 150px;
+    text-align: left;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 3px 5px rgb(40,80,200);
+    z-index: 10;
+}
+
+@media (max-width: 400px) {
+    #article-1 > h2 {
+        padding-top: 100px;
+    }
+}
+
+
+
+#article-2 h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#purchasestitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(900px, 80%);
+    border-bottom: solid 0.5px gray;
+}
+
+#purchasestitle p {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#purchases {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    max-width: min(900px, 80%);
+}
+
+#purchasesempty {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    max-width: 450px;
+    border: solid 3px rgb(40,60,200);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.purchaseitem {
+    display: flex;
+    padding: 20px;
+    min-height: 100px;
+    border-bottom: solid 0.5px gray;
+    font-weight: bold;
+}
+
+.purchaseitem .imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    min-width: 80px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.purchaseitem img {
+    display: block;
+    height: 90px;
+}
+
+.purchaseitem .name {
+    width: 30%;
+    min-width: 100px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.purchaseitem .name:hover {
+    cursor: pointer;
+}
+
+.purchaseitem .price {
+    align-self: center;
+    width: 10%;
+    min-width: 80px;
+}
+
+.purchaseitem .date {
+    align-self: center;
+    width: 30%;
+    min-width: 150px;
+}
+
+
+@media (max-width: 1000px) {
+    #purchasestitle {
+        max-width: min(900px, 90%);
+    }
+
+    #purchases {
+        max-width: min(900px, 90%);
+    }
+}
+
+@media (max-width: 800px) {
+    #purchasestitle * {
+        display: none !important;
+    }
+
+    .purchaseitem {
+        flex-wrap: wrap;
+    }
+
+    .purchaseitem > * {
+        margin: 5px;
+    }
+
+    .purchaseitem .price {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    #purchasestitle {
+        width: calc(100% - 30px);
+    }
+
+    #purchases {
+        width: calc(100% - 30px);
+    }
+
+    .purchaseitem .name {
+        min-width: 100px;
+    }
+}

@@ -57,9 +57,9 @@ footer {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, 140px);
   grid-auto-columns: auto;
-  max-width: 200px;
+  max-width: 280px;
   max-height: 80px;
   padding: 10px;
 }
@@ -80,7 +80,7 @@ footer {
   text-decoration-line: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #footer {
     justify-content: center;
     height: 200px;
@@ -93,5 +93,12 @@ footer {
 
   .footerlinks {
     flex: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #footer {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
