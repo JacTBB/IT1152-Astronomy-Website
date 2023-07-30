@@ -70,31 +70,10 @@ async function purchase() {
 
 
 
-var purchased = false
 function submitfunction() {
     document.getElementById('purchaseoverlay').style.display = 'block'
 
-    setTimeout(async () => {
-        if (await formvalidate() && purchased == false) {
-            purchased = true
-            purchase()
-        }
-        else {
-            document.getElementById('purchaseoverlay').style.display = 'none'
-            alert("Failed Validation!")
-        }
-    }, 1)
+    purchase()
+    
     return false
-}
-
-
-
-//TODO: TEMP
-async function formvalidate() {
-    await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve()
-        }, 1000)
-    })
-    return true
 }

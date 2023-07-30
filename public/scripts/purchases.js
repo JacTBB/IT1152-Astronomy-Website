@@ -87,5 +87,5 @@ function cart() {
 }
 //Cart Go To Checkout Page
 function gocheckoutpage() {
-    window.location.href = '#'
+    window.location.href = 'checkout.html'
 }

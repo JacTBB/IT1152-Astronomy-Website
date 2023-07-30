@@ -119,13 +119,6 @@ function gocheckoutpage() {
 }
 
 //Functions
-function productpagefunction(x) {
-    if (!x.target) return
-    const productdata = allproductdata.find((y) => `URL${y['name']}` == x.target.id)
-
-    window.open(`products/${productdata['name']}.html`, '_self')
-}
-
 function additemtocartfunction(x) {
     console.log(x)
     if (!x.target) return

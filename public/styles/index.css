@@ -51,57 +51,67 @@ body {
 }
 
 #article-2 > h3 {
-    background-color: rgb(40,60,160);
-    padding: 20px 20px;
+    padding: 60px 20px;
     margin: 0;
-    font-size: 1.5em;
+    background-color: black;
+    font-size: 25px;
     font-weight: bolder;
     text-align: center;
     text-shadow: 2px 3px 4px black;
 }
 
-#article-2 > h4 {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(20,40,100);
-    margin: 0;
-}
-#article-2 > h4 > a {
-    min-width: min(20%, 150px);
-    min-height: 50px;
-    padding: 10px;
-    padding-top: 20px;
-    margin: 0;
-    list-style-type: none;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgb(20,40,100);
-    color: white;
+#article-2 a {
+    color: inherit;
     text-decoration: none;
 }
-#article-2 > h4 > a:hover {
-    background-color: rgb(20,40,120);
-    outline: 1px solid black;
-    text-shadow: 1px 2px 4px black;
+#article-2 a:hover div h4 {
+    text-decoration: underline;
 }
 
-#article-2 > div {
+#article-2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    height: 300px;
     background-color: darkblue;
     border: solid 1px black;
 }
 
-#article-2 > div > h4 {
+#article-2 div h4 {
     margin: 0;
-    text-align: center;
-}
-#article-2 > div > h4:hover {
-    text-decoration: underline;
+    font-size: 30px;
 }
 
-#article-2 > div > h4 > a {
-    color: inherit;
-    text-decoration: none;
+#solarsystem h4 {
+    padding-bottom: 40px;
+    width: 70%;
+    height: 100px;
+    text-align: right;
+}
+#spacetravel h4 {
+    width: 70%;
+    text-align: left;
+}
+#store h4 {
+    padding-bottom: 50px;
+    width: 70%;
+    height: 100px;
+    text-align: center;
+}
+
+#solarsystem {
+    background-image: url(https://cdn.mos.cms.futurecdn.net/v5n22xGyNNHLzSnSArbrVH-1200-80.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#spacetravel {
+    background-image: url(https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ja2V0JTIwbGF1bmNofGVufDB8fDB8fHww&w=1000&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#store {
+    background-image: url(https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/Shopping-Images/Space-Shop_For-Web_630x365.ashx?h=365&w=630&la=en&hash=D6308902A9EBA1176ACB0C61B07F83DB7C355800);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

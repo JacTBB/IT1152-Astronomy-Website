@@ -127,9 +127,9 @@ section, article {
     height: 160px;
 }
 
-.productcard img:hover {
+/* .productcard img:hover {
     cursor: pointer;
-}
+} */
 
 .productcard .featuredimgbox img {
     height: 430px;
@@ -142,9 +142,9 @@ section, article {
     margin-bottom: 10px;
 }
 
-.productcard h4:hover {
+/* .productcard h4:hover {
     cursor: pointer;
-}
+} */
 
 .productcard p {
     width: 100%;
