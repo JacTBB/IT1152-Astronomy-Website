@@ -130,7 +130,7 @@ nav {
   border-bottom-color: rgb(100,180,255);
 }
 .navdisplaybutton:nth-child(1) {
-  margin-left: calc(100% - 350px);
+  margin-left: calc(100% - 250px);
 }
 
 @media (max-width: 760px) {

@@ -21,54 +21,55 @@ function reloadcart() {
         }
 
         //ProductInfo
-        for (var i=0; i < localStorage.length; i++) {
-            const key = localStorage.key(i)
-            const value = localStorage.getItem(key)
-            if (isNaN(value)) {
-                if (key != 'userdata' && key !='comments' && value.length < 10) {
-                    setTimeout(() => {
-                        localStorage.removeItem(key)
-                    }, 1000)
+        var Cart = JSON.parse(localStorage.getItem('cart'))
+        for (const key in Cart) {
+            const value = Cart[key]
+
+            productdata = allproductdata.find((y) => y['name'] == key)
+
+            if (productdata) {
+                //Product
+                const div = document.createElement('div')
+                const imgbox = document.createElement('div')
+                const img = document.createElement('img')
+                const productname = document.createElement('p')
+                const price = document.createElement('p')
+
+                div.classList = 'cartitem'
+                imgbox.classList = 'cartitemimgbox'
+                img.classList = 'cartitemimg'
+                img.src = productdata['image']
+                productname.classList = 'cartitemname'
+                productname.innerHTML = `${productdata['name']}`
+                price.classList = 'cartitemprice'
+                price.innerHTML = `${value} x $${productdata['price']}`
+
+                div.appendChild(imgbox)
+                imgbox.appendChild(img)
+                div.appendChild(productname)
+                div.appendChild(price)
+                
+                products.appendChild(div)
+
+                //Remove Cart Empty Message
+                if (products.hasChildNodes()) {
+                    const cartempty = document.getElementById('cartempty')
+                    cartempty.style.display = 'none';
                 }
-            }
-            else {
-                productdata = allproductdata.find((y) => y['name'] == key)
 
-                if (productdata) {
-                    //Product
-                    const div = document.createElement('div')
-                    const img = document.createElement('img')
-                    const productname = document.createElement('p')
-                    const price = document.createElement('p')
+                total += productdata['price'] * value
 
-                    div.classList = 'cartitem'
-                    img.classList = 'cartitemimg'
-                    img.src = productdata['image']
-                    productname.classList = 'cartitemname'
-                    productname.innerHTML = `${productdata['name']}`
-                    price.classList = 'cartitemprice'
-                    price.innerHTML = `${value} x $${productdata['price']}`
+                //Total
+                const carttotal = document.getElementById('cartitemtotal')
+                carttotal.innerHTML = `Subtotal: $${total.toFixed(2)}`
 
-                    div.appendChild(img)
-                    div.appendChild(productname)
-                    div.appendChild(price)
-                    
-                    products.appendChild(div)
+                //Cart Amount
+                const cartamt1 = document.getElementById('cart-amt1')
+                const cartamt2 = document.getElementById('cart-amt2')
+                const CartLength = Object.values(Cart).reduce((a,c) => a+c)
 
-                    //Remove Cart Empty Message
-                    if (products.hasChildNodes()) {
-                        const cartempty = document.getElementById('cartempty')
-                        cartempty.style.display = 'none';
-                    }
-
-                    total += productdata['price'] * value
-
-                    if (i == localStorage.length-1) {
-                        //Total
-                        const carttotal = document.getElementById('cartitemtotal')
-                        carttotal.innerHTML = `Subtotal: $${total}`
-                    }
-                }
+                cartamt1.innerText = CartLength
+                cartamt2.innerText = CartLength
             }
         }
 

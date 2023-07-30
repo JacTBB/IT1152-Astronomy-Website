@@ -3,6 +3,7 @@ getproductdata()
 .then(() => {
     for (productdata of allproductdata) {
         const div = document.createElement('div')
+        const imgbox = document.createElement('div')
         const img = document.createElement('img')
         const productname = document.createElement('h4')
         const desc = document.createElement('p')
@@ -14,6 +15,7 @@ getproductdata()
         productname.innerHTML = productdata['name']
         productname.id = `URL${productdata['name']}`
         productname.addEventListener('click', productpagefunction)
+        imgbox.classList = 'imgbox'
         img.src = productdata['image']
         img.alt = productdata['name']
         img.id = `URL${productdata['name']}`
@@ -29,7 +31,8 @@ getproductdata()
         button.type = 'button'
         button.addEventListener('click', addtocartfunction)
 
-        div.appendChild(img)
+        div.appendChild(imgbox)
+        imgbox.appendChild(img)
         div.appendChild(productname)
         div.appendChild(desc)
         div.appendChild(price)
@@ -43,12 +46,10 @@ getproductdata()
         }
 
         if (productdata['featured']) {
+            imgbox.classList = 'featuredimgbox'
             div.classList.add('featuredproductcard')
-            div.style.gridArea = `${productdata['showorder']} / 1 / span 2 / span 3`
+            div.style.gridArea = `${productdata['showorder']} / 1 / span 2 / span 2`
             div.style.maxheight = '450px'
-            img.style.aspectRatio = '2/1'
-            img.style.height = 'auto'
-            img.style.maxHeight = '70%'
         }
 
         document.getElementById('products').appendChild(div)
@@ -59,6 +60,31 @@ getproductdata()
     return
 })
 .catch(console.error)
+
+//Cart Toggle Functions
+var cartopen = false;
+function cart() {
+    if (window.innerWidth < 500) {
+        gocheckoutpage()
+        return
+    }
+
+    if (menuopen == true) {
+        menu()
+    }
+    if (cartopen == false) {
+        cartopen = true;
+        document.getElementById('cartdisplay').style.display = "block";
+    }
+    else {
+        cartopen = false;
+        document.getElementById('cartdisplay').style.display = "none";
+    }
+}
+//Cart Go To Checkout Page
+function gocheckoutpage() {
+    window.location.href = 'checkout.html'
+}
 
 //Functions
 function productpagefunction(x) {
@@ -72,23 +98,30 @@ function addtocartfunction(x) {
     if (!x.target) return
     const productdata = allproductdata.find((y) => y['name'] == x.target.id)
 
-    var quantity = parseFloat(localStorage.getItem(productdata['name']))
+    var Cart = JSON.parse(localStorage.getItem('cart')) || {}
+    var quantity = Cart[productdata['name']] || 0
     var notifmessage = 'You have added an item to cart!'
-    if (localStorage.length < 20) {
-        if (!quantity) {
-            quantity = 1
-        }
-        else {
-            if (productdata['multi'] == true) {
-                quantity += 1
+    if (Object.keys(Cart).length < 10 || typeof(Object.keys(Cart).length) == 'undefined') {
+        if (quantity < 10) {
+            if (!quantity || quantity == 0) {
+                quantity = 1
             }
             else {
-                notifmessage = 'You can only add 1 of this item!'
+                if (productdata['multi'] == true) {
+                    quantity += 1
+                }
+                else {
+                    notifmessage = 'You can only add 1 of this item!'
+                }
             }
+            Cart[productdata['name']] = quantity
+            localStorage.setItem('cart', JSON.stringify(Cart))
+    
+            console.log(productdata['name'], "/", quantity, "/", `Multi: ${productdata['multi']}`)
         }
-        localStorage.setItem(productdata['name'], quantity)
-
-        console.log(productdata['name'], "/", quantity, "/", `Multi: ${productdata['multi']}`)
+        else {
+            notifmessage = 'Max quantity allowed for this item!'
+        }
     }
     else {
         notifmessage = 'Your shopping cart is full!'

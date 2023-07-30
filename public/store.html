@@ -31,8 +31,8 @@
 <body onload="LoadContent()">
   <nav id="navbar" style="display: none;">
     <span>
-      <a href="#"><img src="images/Astronomy Odyssey.png"></a>
-      <a href="#"><h2>Astronomy Odyssey</h2></a>
+      <a href="home.html"><img src="images/Astronomy Odyssey.png"></a>
+      <a href="home.html"><h2>Astronomy Odyssey</h2></a>
     </span>
     
     <div class="navtoggle" id="navtoggle" onclick="menu()">
@@ -60,15 +60,20 @@
       </script>
     </div>
 
-    <a class="navbutton cartbutton" id="cartbutton1" onclick="cart()" style="margin-right: 30px;"><img src="images/cart.png" width="40px" alt="Cart"></a>
-    <a class="navbutton" href="#"><h5 style="margin: 0;">Merch</h5></a>
-    <a class="navbutton" href="#"><h5 style="margin: 0;">News</h5></a>
-    <a class="navbutton" href="solar-system.html"><h5 style="margin: 0;">Discover</h5></a>
+    <a class="navbutton cartbutton" id="cartbutton1" onclick="cart()"><h5 style="margin: 0;">
+      Cart (<span id="cart-amt1">0</span>) <i class="fa-solid fa-cart-shopping"></i>
+    </h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Checkout</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Purchases</h5></a>
+    <a class="navbutton" href="#"><h5 style="margin: 0;">Store</h5></a>
   </nav>
   <div id="navdisplay">
-    <a class="navdisplaybutton" href="solar-system.html"><h5 style="margin: 0">Discover</h5></a>
-    <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">News</h5></a>
-    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Merch</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Store</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0;">Purchases</h5></a>
+    <a class="navdisplaybutton" href="#"><h5 style="margin: 0">Checkout</h5></a>
+    <a class="navdisplaybutton cartbutton" id="cartbutton2" onclick="cart()"><h5 style="margin: 0;">
+      Cart (<span id="cart-amt2">0</span>) <i class="fa-solid fa-cart-shopping"></i>
+    </h5></a>
   </div>
   <div id="cartdisplay">
     <h3>Shopping Cart</h3>
@@ -86,27 +91,6 @@
       <p id="cartitemtotal"></p>
     </div>
     <button type="button" onclick="gocheckoutpage()" id="cartcheckout"><a href="checkout.html">Checkout</a></button>
-    <script>
-      //Cart Toggle
-      var cartopen = false;
-      function cart() {
-        if (menuopen == true) {
-          menu()
-        }
-        if (cartopen == false) {
-          cartopen = true;
-          document.getElementById('cartdisplay').style.display = "block";
-        }
-        else {
-          cartopen = false;
-          document.getElementById('cartdisplay').style.display = "none";
-        }
-      }
-      //Go to checkout page
-      function gocheckoutpage() {
-        window.location.href = 'checkout.html'
-      }
-    </script>
   </div>
 
   <div class="content" id="maindiv" style="display: none;">

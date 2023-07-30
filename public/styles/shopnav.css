@@ -68,17 +68,7 @@ nav {
   border-bottom-color: rgb(100,180,255);
 }
 .cartbutton {
-  height: 40px;
-  padding: 0px;
-  padding-bottom: 5px;
-  margin: 10px !important;
-  margin-bottom: 5px;
-}
-.cartbutton img {
-  border-radius: 15px;
-}
-.cartbutton:hover img {
-  box-shadow: 1px 1px 5px rgb(20,60,100);
+  margin-right: 30px;
 }
 
 .navtoggle {
@@ -140,12 +130,19 @@ nav {
   border-bottom-color: rgb(100,180,255);
 }
 .navdisplaybutton:nth-child(1) {
-  margin-left: calc(100% - 350px);
+  margin-left: calc(100% - 300px);
+}
+
+#cartbutton2 {
+  display: none;
 }
 
 @media (max-width: 760px) {
   .navbutton {
     display: none;
+  }
+  #cartbutton1 {
+    display: block;
   }
   
   .navdropdown {
@@ -162,8 +159,15 @@ nav {
 }
 
 @media (max-width: 500px) {
+  #cartbutton1 {
+    display: none;
+  }
+  #cartbutton2 {
+    display: block;
+  }
+
   #navdisplay {
-    height: 160px;
+    height: 220px;
   }
 
   .navdisplaybutton {
@@ -181,33 +185,44 @@ nav {
   display: none;
   background-color: rgb(250,250,250);
   position: fixed;
-  margin-top: 65px;
+  margin-top: 10px;
+  margin-right: 20px;
   right: 10px;
   padding: 5px 20px;
-  width: 30%;
+  width: 350px;
   min-height: 60px;
   text-align: center;
   z-index: 2;
   box-shadow: 1px 1px 10px grey;
   border-radius: 10px;
 }
+
 #cartdisplay h3 {
   margin: 0;
   padding: 5px;
   border-bottom: solid 1px grey;
 }
+
 .cartitem {
   margin: 10px 0;
   padding-bottom: 5px;
   height: 40px;
   text-align: left;
   border-bottom: solid 1px grey;
+  font-family: 'Montserrat', sans-serif;;
 }
-.cartitem .cartitemimg {
+.cartitem .cartitemimgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
   margin-right: 5px;
-  max-width: 22%;
-  max-height: 100%;
+  width: 80px;
+  height: 36px;
+}
+.cartitem .cartitemimg {
+  max-width: 100%;
+  max-height: 36px;
 }
 .cartitem .cartitemname {
   float: left;
@@ -215,6 +230,7 @@ nav {
   width: 75%;
   margin: 0;
   font-size: 15px;
+  font-weight: 500;
 }
 .cartitem .cartitemprice {
   float: left;
@@ -230,6 +246,7 @@ nav {
   margin: 10px 0;
   text-align: center;
 }
+
 .carttotal #cartitemtotal {
   margin: 0;
   padding-bottom: 5px;
@@ -237,11 +254,12 @@ nav {
   font-size: 16px;
   font-weight: bold;
 }
+
 #cartcheckout {
   margin-bottom: 10px;
   height: 30px;
   width: 60%;
-  background-color: rgb(60,180,250);
+  background-color: rgb(40,60,180);
   border: none;
   border-radius: 10px;
   color: white;
@@ -249,7 +267,7 @@ nav {
   font-weight: bold;
 }
 #cartcheckout:hover {
-  background-color: rgb(40,140,220);
+  background-color: rgb(20,40,120);
   box-shadow: 1px 1px 5px rgb(150,150,150);
 }
 #cartcheckout a {
