@@ -30,7 +30,7 @@ section, article {
 #article-1 {
     height: 40vh;
     padding: 0;
-    background-image: url('https://t3.ftcdn.net/jpg/04/30/63/68/360_F_430636809_IXyWS1BBJvVG0wAiqNRUde7AaWEAlbxt.jpg');
+    background-image: url('../images/checkout/rocket.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

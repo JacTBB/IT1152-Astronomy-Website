@@ -30,7 +30,7 @@ section, article {
 #article-1 {
     height: 40vh;
     padding: 0;
-    background-image: url('https://images.theconversation.com/files/446192/original/file-20220214-19-z6fu9c.jpeg?ixlib=rb-1.1.0&rect=49%2C143%2C2932%2C1464&q=45&auto=format&w=1356&h=668&fit=crop');
+    background-image: url('../images/purchases/iss.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

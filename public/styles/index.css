@@ -101,17 +101,17 @@ body {
 }
 
 #solarsystem {
-    background-image: url(https://cdn.mos.cms.futurecdn.net/v5n22xGyNNHLzSnSArbrVH-1200-80.jpg);
+    background-image: url('../images/index/solarsystem.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #spacetravel {
-    background-image: url(https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ja2V0JTIwbGF1bmNofGVufDB8fDB8fHww&w=1000&q=80);
+    background-image: url('../images/index/spacetravel.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #store {
-    background-image: url(https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/Shopping-Images/Space-Shop_For-Web_630x365.ashx?h=365&w=630&la=en&hash=D6308902A9EBA1176ACB0C61B07F83DB7C355800);
+    background-image: url('../images/index/store.ashx');
     background-size: cover;
     background-repeat: no-repeat;
 }

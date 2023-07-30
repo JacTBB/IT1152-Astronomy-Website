@@ -14,15 +14,15 @@ getproductdata()
         div.id = productdata['name']
         productname.innerHTML = productdata['name']
         productname.id = `URL${productdata['name']}`
-        productname.addEventListener('click', productpagefunction)
+        // productname.addEventListener('click', productpagefunction)
         imgbox.classList = 'imgbox'
         img.src = productdata['image']
         img.alt = productdata['name']
         img.id = `URL${productdata['name']}`
-        img.addEventListener('click', productpagefunction)
+        // img.addEventListener('click', productpagefunction)
         desc.innerHTML = productdata['brief']
         desc.id = `URL${productdata['name']}`
-        desc.addEventListener('click', productpagefunction)
+        // desc.addEventListener('click', productpagefunction)
         price.classList = 'price'
         price.innerHTML = `$${productdata['price']} `
         button.classList = 'productbutton'
