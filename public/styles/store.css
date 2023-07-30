@@ -1,0 +1,226 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#maindiv {
+    top: 0;
+    height: 100vh;
+    color: black;
+    background-color: rgb(240,240,240);
+    overflow-y: scroll;
+}
+
+#maindiv * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section, article {
+    background-color: transparent;
+}
+
+
+
+#article-1 {
+    height: 50vh;
+    padding: 0;
+    background-image: url('../images/store/earth.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#article-1 h2 {
+    margin: 0;
+    padding: 20px 40px;
+    padding-top: 200px;
+    width: calc(100% - 80px);
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 3px 5px rgb(40,80,200);
+    z-index: 10;
+}
+
+@media (max-width: 419px) {
+    #article-1 > h2 {
+        padding-top: 150px;
+    }
+}
+
+#article-1 > h2 > span {
+    color: rgb(60,120,240);
+}
+
+
+
+#searchbox {
+    margin-left: 2%;
+    margin-bottom: 10px;
+    height: 27px;
+    max-width: 400px;
+}
+
+#searchbox button {
+    float: left;
+    padding: 2px;
+    width: 6%;
+    height: 25px;
+    box-sizing: content-box;
+    color: rgb(60, 120, 180);
+    background: none;
+    border: none;
+    border-bottom: solid 5px rgb(60, 120, 180);
+    cursor: pointer;
+}
+#searchbox button i:before {
+    font-family: "Font Awesome 6 Free";
+}
+
+#searchbar {
+    float: left;
+    padding: 2px 5px;
+    width: calc(94% - 17px);
+    height: 25px;
+    border: none;
+    border-bottom: solid 5px rgb(60, 120, 180);
+    background: none;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, min(calc(32% - 20px), 300px)));
+    justify-content: center;
+}
+
+.productcard {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.productcard img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    border-radius: 20px 20px 0 0;
+}
+
+.productcard img:hover {
+    cursor: pointer;
+}
+
+.productcard h4 {
+    width: 100%;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.productcard h4:hover {
+    cursor: pointer;
+}
+
+.productcard p {
+    width: 100%;
+    margin: 10px;
+}
+
+.productcard .price {
+    width: 100%;
+    align-self: flex-end;
+    text-align: left;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.productbutton {
+    float: right;
+    height: 100%;
+    background-color: rgb(140, 220, 255);
+    border: solid rgb(60, 120, 180) 1px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px grey;
+    font-family: "Alata";
+}
+
+.productbutton:hover {
+    background-color: rgb(100, 180, 220)
+}
+
+@media (max-width: 719px) {
+    .featuredproductcard {
+        grid-column: 1 / span 2 !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #products {
+        grid-template-columns: minmax(220px, min(calc(100% - 20px), 300px));
+    }
+
+    .featuredproductcard {
+        grid-column: 1 / span 1 !important;
+        grid-row: 1 /span 1 !important;
+        height: auto !important;
+    }
+}
+
+
+
+#notificationbar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.notification {
+    display: none;
+    padding: 10px;
+    margin: 5px;
+    border: solid rgb(100, 100, 100) 2px;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 1px 1px 5px grey;
+}
+
+@keyframes fadeInAnim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutAnim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.notificationinanim {
+    animation-name: fadeInAnim;
+    animation-duration: 0.5s;
+}
+
+.notificationoutanim {
+    animation-name: fadeOutAnim;
+    animation-duration: 0.5s;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 20px;
+}
