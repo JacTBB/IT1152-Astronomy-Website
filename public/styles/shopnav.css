@@ -69,6 +69,7 @@ nav {
 }
 .cartbutton {
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .navtoggle {
